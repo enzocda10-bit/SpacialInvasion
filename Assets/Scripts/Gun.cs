@@ -18,6 +18,14 @@ public class Gun : MonoBehaviour
     [SerializeField] private float reloadDuration;
     private bool isReloading;
 
+
+    [SerializeField] private float aimDistance = 100f;
+    [SerializeField] private float minAimDistance = 2f;
+    [SerializeField] private LayerMask aimMask;
+
+    [SerializeField] private Camera fpsCam;
+    [SerializeField] private GameObject muzzlePrefab;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -32,7 +40,9 @@ public class Gun : MonoBehaviour
 
             Vector3 shootPosition = ShootOut.transform.position;
 
-            Instantiate(bulletPrefab, shootPosition, ShootOut.transform.rotation);
+            var muzzleEffect = Instantiate(muzzlePrefab, shootPosition, ShootOut.transform.rotation);
+            Destroy(muzzleEffect, 0.5f);
+            Instantiate(bulletPrefab, shootPosition, GetAimRotation());
             bulletsLeft--;
             shootCooldown = reloadTime;
         }
@@ -73,5 +83,19 @@ public class Gun : MonoBehaviour
     private void UpdateText()
     {
         ammoText.SetText(bulletsLeft.ToString() + " / " + magazineSize.ToString());
+    }
+
+    private Quaternion GetAimRotation()
+    {
+        Ray aimRay = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        float distance = aimDistance;
+
+        if (Physics.Raycast(aimRay, out RaycastHit hit, aimDistance, aimMask))
+        {
+            distance = Mathf.Max(hit.distance, minAimDistance);
+        }
+
+        Vector3 aimPoint = aimRay.GetPoint(distance);
+        return Quaternion.LookRotation(aimPoint - ShootOut.transform.position);
     }
 }

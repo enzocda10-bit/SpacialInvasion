@@ -7447,7 +7447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112755947}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PeDoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76302,6 +76302,14 @@ MonoBehaviour:
   ammoText: {fileID: 636664251}
   magazineSize: 30
   reloadDuration: 2
+  aimDistance: 100
+  minAimDistance: 2
+  aimMask:
+    serializedVersion: 2
+    m_Bits: 55
+  fpsCam: {fileID: 895632155}
+  muzzlePrefab: {fileID: 6076308697013177144, guid: 5e26dfbd6df58414b86a14a25a61f322,
+    type: 3}
 --- !u!1001 &1146838367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87488,7 +87496,7 @@ GameObject:
   - component: {fileID: 1302870524}
   - component: {fileID: 1302870523}
   - component: {fileID: 1302870522}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -87554,8 +87562,8 @@ MonoBehaviour:
   groundCheck: {fileID: 112755947}
   groundMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  jumpForce: 3
+    m_Bits: 55
+  jumpForce: 4
 --- !u!23 &1302870524
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -130299,7 +130307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929384366}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
