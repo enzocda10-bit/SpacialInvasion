@@ -39752,6 +39752,10 @@ PrefabInstance:
       value: .338581085
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: fedf50d65fc79434b89f634a6cba8fb2, type: 3}
+      propertyPath: m_Range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: fedf50d65fc79434b89f634a6cba8fb2, type: 3}
       propertyPath: m_Color.b
       value: 0.13235295
       objectReference: {fileID: 0}
@@ -50934,7 +50938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785516693}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07977707, y: 0.31690317, z: -0.026976531, w: 0.94471174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: 1.7, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -87515,7 +87519,7 @@ MonoBehaviour:
   m_VerticalAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 600
+    m_MaxSpeed: 500
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -87539,7 +87543,7 @@ MonoBehaviour:
   m_HorizontalAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 600
+    m_MaxSpeed: 500
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
