@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     private Rigidbody rb;
+    [SerializeField] private int damage = 10;
     [SerializeField] private GameObject impactEffectPrefab;
 
     // Start is called before the first frame update
@@ -20,6 +21,12 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         SpawnImpact(collision);
+
+        if (collision.gameObject.TryGetComponent(out Health health))
+        {
+            health.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
     }
 

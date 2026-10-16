@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1835031687661343085}
   - component: {fileID: 1835031687661343087}
   - component: {fileID: 1835031687661343086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4911,7 +4911,7 @@ GameObject:
   - component: {fileID: 5916890301186936552}
   - component: {fileID: 5916890301186936550}
   - component: {fileID: 5916890301186936553}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9832,7 +9832,7 @@ GameObject:
   - component: {fileID: 2989284410509403606}
   - component: {fileID: 4734050995774986224}
   - component: {fileID: 7842939374974818442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FX_Shoot_06_projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14795,6 +14795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 100
+  damage: 10
   impactEffectPrefab: {fileID: 6709493466234772729, guid: 0bbd30398941be14a991c4ecd2ecdb61,
     type: 3}
 --- !u!1 &6234977805289535943
@@ -14808,7 +14809,7 @@ GameObject:
   - component: {fileID: 6234977805289535944}
   - component: {fileID: 6234977805289535945}
   - component: {fileID: 6234977805289535942}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: back_fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19708,7 +19709,7 @@ GameObject:
   - component: {fileID: 6649884074681586641}
   - component: {fileID: 6649884074681586647}
   - component: {fileID: 6649884074681586640}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
