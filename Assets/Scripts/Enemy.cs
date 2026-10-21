@@ -19,6 +19,19 @@ public class Enemy : MonoBehaviour
 
     private float nextShootTime;
 
+    private void Start()
+    {
+        if (player == null)
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+
+            if (playerObject != null)
+            {
+                player = playerObject.transform;
+            }   
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
