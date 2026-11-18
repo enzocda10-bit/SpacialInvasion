@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -23,6 +24,16 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+
+            if (gameObject.name == "Boss")
+            {
+                SceneManager.LoadScene("Win");
+            }
+
+            if (gameObject.name == "Player")
+            {
+                SceneManager.LoadScene("Lose");
+            }
         }
     }
 }

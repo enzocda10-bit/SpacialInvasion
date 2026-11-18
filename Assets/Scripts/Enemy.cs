@@ -11,13 +11,12 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private Animator animator;
 
     [SerializeField] private float chaseRange;
     [SerializeField] private float attackRange;
-
-    [SerializeField] private float timeBetweenAttacks;
-
-    private float nextShootTime;
+    private const string isChassing = "isChasing";
+    private const string isAttacking = "isShooting";
 
     private void Start()
     {
@@ -56,16 +55,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public void Shoot()
+    {
+        Instantiate(bullet, firePoint.position, firePoint.rotation);
+    }
+
     private void Attack()
     {
         agent.ResetPath();
         LookAtPlayer();
-
-        if (Time.time >= nextShootTime)
-        {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-            nextShootTime = Time.time + timeBetweenAttacks;
-        }
+        SetAnimation(false, true);
     }
 
     private void LookAtPlayer()
@@ -78,11 +77,19 @@ public class Enemy : MonoBehaviour
     private void Idle()
     {
         agent.ResetPath();
+        SetAnimation(false, false);
     }
 
     private void Chase()
     {
         agent.SetDestination(player.position);
+        SetAnimation(true, false);
+    }
+
+    private void SetAnimation(bool chasing, bool attacking)
+    {
+        animator.SetBool(isChassing, chasing);
+        animator.SetBool(isAttacking, attacking);
     }
 
     private void OnDrawGizmosSelected()
