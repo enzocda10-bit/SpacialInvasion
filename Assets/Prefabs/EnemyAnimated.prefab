@@ -463,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 8457924234921209479, guid: 5a969b180c1ceb34dbf1110e9e5634ef,
         type: 3}
       propertyPath: m_Name
-      value: EnemyAnimated Variant
+      value: EnemyAnimated
       objectReference: {fileID: 0}
     - target: {fileID: 8457924234921209479, guid: 5a969b180c1ceb34dbf1110e9e5634ef,
         type: 3}
@@ -630,9 +630,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 1.9643286
+  m_Height: 1.9920974
   m_Direction: 1
-  m_Center: {x: 0, y: 0.9817539, z: 0}
+  m_Center: {x: 0, y: 0.9678695, z: 0}
 --- !u!195 &8084093461408265532
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -674,7 +674,6 @@ MonoBehaviour:
   animator: {fileID: 5742661465666196900}
   chaseRange: 15
   attackRange: 7
-  timeBetweenAttacks: 2
 --- !u!114 &7925388999508794907
 MonoBehaviour:
   m_ObjectHideFlags: 0

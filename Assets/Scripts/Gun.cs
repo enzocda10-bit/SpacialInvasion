@@ -15,6 +15,9 @@ public class Gun : MonoBehaviour
     [SerializeField] private int magazineSize;
     private float bulletsLeft;
 
+    [SerializeField] private Health playerHealth;
+    [SerializeField] private float playerRegenHealthAmount;
+
     [SerializeField] private float reloadDuration;
     private bool isReloading;
 
@@ -77,6 +80,8 @@ public class Gun : MonoBehaviour
         yield return new WaitForSeconds(reloadDuration);
 
         bulletsLeft = magazineSize;
+        playerHealth.currentHealth += playerRegenHealthAmount;
+        playerHealth.healthBarFill.fillAmount = playerHealth.currentHealth / playerHealth.maxHealth;
         isReloading = false;
     }
 
