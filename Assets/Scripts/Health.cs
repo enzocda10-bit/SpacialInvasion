@@ -11,6 +11,10 @@ public class Health : MonoBehaviour
 
     public float currentHealth;
 
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private float deathSoundVolume = 0.8f;
+    [SerializeField] private Vector2 shootPitch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,9 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+
+            float pitch = Random.Range(shootPitch.x, shootPitch.y);
+            AudioManager.Instance.PlaySFX(deathSound, deathSoundVolume, pitch);
 
             if (gameObject.name == "Boss")
             {

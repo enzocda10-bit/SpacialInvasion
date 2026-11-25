@@ -18,6 +18,10 @@ public class Enemy : MonoBehaviour
     private const string isChassing = "isChasing";
     private const string isAttacking = "isShooting";
 
+    [SerializeField] private AudioClip bulletSound;
+    [SerializeField] private float bulletSoundVolume;
+    [SerializeField] private Vector2 shootPitch;
+
     private void Start()
     {
         if (player == null)
@@ -58,6 +62,8 @@ public class Enemy : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        float pitch = Random.Range(shootPitch.x, shootPitch.y);
+        AudioManager.Instance.PlaySFX(bulletSound, bulletSoundVolume, pitch);
     }
 
     private void Attack()

@@ -29,6 +29,10 @@ public class Gun : MonoBehaviour
     [SerializeField] private Camera fpsCam;
     [SerializeField] private GameObject muzzlePrefab;
 
+    [SerializeField] private AudioClip bulletSound;
+    [SerializeField] private float bulletSoundVolume;
+    [SerializeField] private Vector2 shootPitch;
+
     private void Awake()
     {
         bulletsLeft = magazineSize;
@@ -46,6 +50,10 @@ public class Gun : MonoBehaviour
             var muzzleEffect = Instantiate(muzzlePrefab, shootPosition, ShootOut.transform.rotation);
             Destroy(muzzleEffect, 0.5f);
             Instantiate(bulletPrefab, shootPosition, GetAimRotation());
+
+            float pitch = Random.Range(shootPitch.x, shootPitch.y);
+            AudioManager.Instance.PlaySFX(bulletSound, bulletSoundVolume, pitch);
+
             bulletsLeft--;
             shootCooldown = reloadTime;
         }

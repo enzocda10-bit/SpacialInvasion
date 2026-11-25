@@ -674,6 +674,9 @@ MonoBehaviour:
   animator: {fileID: 5742661465666196900}
   chaseRange: 15
   attackRange: 7
+  bulletSound: {fileID: 8300000, guid: 6dbe9552a85903c4a8da427cbbf9a605, type: 3}
+  bulletSoundVolume: 0.5
+  shootPitch: {x: 0.95, y: 1.05}
 --- !u!114 &7925388999508794907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +692,9 @@ MonoBehaviour:
   maxHealth: 100
   healthBarFill: {fileID: 6112275414335930423}
   currentHealth: 0
+  deathSound: {fileID: 8300000, guid: b152740d936cbb1429f9425de7fd97d3, type: 3}
+  deathSoundVolume: 0.8
+  shootPitch: {x: 0.95, y: 1.05}
 --- !u!4 &1079064912002204551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9091437148616602685, guid: 5a969b180c1ceb34dbf1110e9e5634ef,
