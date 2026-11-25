@@ -76190,21 +76190,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 286226973652181546, guid: 1816dfa34b0535a44a141124acd234b3,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 286226973652181546, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 286226973652181546, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 286226973652181546, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12
       objectReference: {fileID: 0}
@@ -76258,40 +76243,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannon
       objectReference: {fileID: 0}
-    - target: {fileID: 1461374107467265791, guid: 1816dfa34b0535a44a141124acd234b3,
+    - target: {fileID: 5935123219444810696, guid: 1816dfa34b0535a44a141124acd234b3,
         type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467838761916283160, guid: 1816dfa34b0535a44a141124acd234b3,
+      propertyPath: fpsCam
+      value: 
+      objectReference: {fileID: 895632155}
+    - target: {fileID: 5935123219444810696, guid: 1816dfa34b0535a44a141124acd234b3,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5561804771906920181, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6745766748433787304, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.76
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7792974478708125031, guid: 1816dfa34b0535a44a141124acd234b3, type: 3}
-    - {fileID: 757952594332564461, guid: 1816dfa34b0535a44a141124acd234b3, type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 636664251}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 286226973652181546, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1228226920}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 626898950306936976, guid: 1816dfa34b0535a44a141124acd234b3,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1145454846}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1816dfa34b0535a44a141124acd234b3, type: 3}
 --- !u!4 &1145454843 stripped
 Transform:
@@ -76299,47 +76264,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1145454842}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1145454844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 626898950306936976, guid: 1816dfa34b0535a44a141124acd234b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1145454842}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1145454845 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 20789035270377331, guid: 1816dfa34b0535a44a141124acd234b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1145454842}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1145454846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145454844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e38311eaed835674d982ae0137e023b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cannonAnimator: {fileID: 1145454845}
-  bulletPrefab: {fileID: 5916890302093399832, guid: fc2682bf2dc5a74499101a46158e24a3,
-    type: 3}
-  ShootOut: {fileID: 1228226919}
-  shootCooldown: 0
-  reloadTime: 0.1
-  ammoText: {fileID: 636664251}
-  magazineSize: 60
-  reloadDuration: 2
-  aimDistance: 100
-  minAimDistance: 2
-  aimMask:
-    serializedVersion: 2
-    m_Bits: 55
-  fpsCam: {fileID: 895632155}
-  muzzlePrefab: {fileID: 6076308697013177144, guid: 5e26dfbd6df58414b86a14a25a61f322,
-    type: 3}
 --- !u!1001 &1146838367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82076,37 +82000,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &1228226919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1228226920}
-  m_Layer: 0
-  m_Name: ShootOut
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1228226920
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228226919}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.74, y: -0.01, z: -1.28}
-  m_LocalScale: {x: 4.7619033, y: 4.7619047, z: 4.7619033}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1145454843}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1233005571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87443,6 +87336,7 @@ GameObject:
   - component: {fileID: 1302870523}
   - component: {fileID: 1302870522}
   - component: {fileID: 1302870526}
+  - component: {fileID: 1302870527}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -87576,6 +87470,29 @@ MonoBehaviour:
   maxHealth: 100
   healthBarFill: {fileID: 2116640720}
   currentHealth: 0
+--- !u!136 &1302870527
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302870520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1307029735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: ac93356612ce24c718977a61ed7246de,
